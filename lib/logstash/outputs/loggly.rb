@@ -80,6 +80,9 @@ class LogStash::Outputs::Loggly < LogStash::Outputs::Base
 
   # Proxy Password
   config :proxy_password, :validate => :password, :default => ""
+  
+  #Timestamp
+  config :timestamp, :validate => :string, :default => "%{@timestamp}"
 
 
   # HTTP constants
